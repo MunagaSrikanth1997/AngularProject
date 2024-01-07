@@ -24,16 +24,16 @@ jobs:
     - name: Build Angular Project
       run: npm run build
 
-    # - name: Package Artifacts
-    #   run: |
-    #     cd ./dist/angularproject/
-    #     zip -r ../../angular-artifact.zip .
+    - name: Package Artifacts
+      run: |
+        cd ./dist/angularproject/
+        zip -r ../../angular-artifact.zip .
     
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
          name: angular-artifact
-         path: ./dist/
+         path: angular-artifact.zip
     - name: list files in dist after build
       run: |
           ls -l ./dist/angularproject
