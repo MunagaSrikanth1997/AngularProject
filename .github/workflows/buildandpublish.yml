@@ -23,14 +23,15 @@ jobs:
 
     - name: Build Angular Project
       run: npm run build
-    - name: list files in dist after build
-      run: |
-       ls -l ./dist/angularproject
+    
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
          name: angular-artifact
          path: dist/
+    - name: list files in dist after build
+      run: |
+          ls -l ./dist/angularproject
 
   publish:
     needs: build
