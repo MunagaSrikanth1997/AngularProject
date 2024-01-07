@@ -53,5 +53,5 @@ jobs:
 
 
     - name: Upload to S3
-      run: aws s3 sync ./dist/angularproject/ s3://mycoderepo/angularbuild/  --recursive --debug
+      run: aws s3 sync ./dist/angularproject/ s3://mycoderepo/angularbuild/  --debug
 
