@@ -26,6 +26,11 @@ jobs:
     - name: list files in dist after build
       run: |
        ls -l ./dist/angularproject
+    - name: Publish Artifact
+      uses: actions/upload-artifact@v2
+      with:
+         name: angular-artifact
+         path: dist/
 
   publish:
     needs: build
