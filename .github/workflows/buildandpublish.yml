@@ -40,7 +40,7 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     - name: list files in dist
       run: |
-       ls -l /dist
+       ls -l .
 
 
     - name: Upload to S3
