@@ -16,13 +16,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4.0.1
       with:
-        node-version: '14'
+        node-version: '18.3'
 
     - name: Install Dependencies
       run: npm install
 
     - name: Build Angular Project
-      run: npm run build --prod
+      run: npm run build
 
   publish:
     needs: build
