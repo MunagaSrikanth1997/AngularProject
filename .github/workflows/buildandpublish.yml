@@ -25,7 +25,7 @@ jobs:
       run: npm run build
     - name: list files in dist after build
       run: |
-       ls -l .
+       ls -l ./dist
 
   publish:
     needs: build
