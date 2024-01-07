@@ -26,7 +26,8 @@ jobs:
 
     - name: Package Artifacts
       run: |
-        zip -r angular-artifact.zip -c ./dist/angularproject/*
+        cd ./dist/angularproject/
+        zip -r angular-artifact.zip ./
     
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
