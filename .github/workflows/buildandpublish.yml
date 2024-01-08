@@ -69,5 +69,5 @@ jobs:
 
 
     - name: Upload to S3
-      run: aws s3 sync ./dist/angularproject/browser/ s3://angularuicode/angulardev/  --debug
+      run: aws s3 sync ./dist/angularproject/browser/ s3://angularuicode/  --debug
 
