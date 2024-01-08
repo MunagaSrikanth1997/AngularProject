@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Build Angular Project
-      run: npm run build
+      run: ng build
       
     # - name: Package Artifacts
     #   run: |
