@@ -27,7 +27,8 @@ jobs:
       run: ng build
     - name: list files after build
       run: |
-          ls -l ./dist/angularproject
+          ls -l .
+          ls -l ./dist/
     # - name: Package Artifacts
     #   run: |
     #     mkdir packaged
