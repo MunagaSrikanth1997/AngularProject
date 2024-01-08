@@ -62,9 +62,9 @@ jobs:
       uses: actions/download-artifact@v2
       with:
          name: angular-artifact
-         path: dist/
+         path: dist/angularproject
 
 
     - name: Upload to S3
-      run: aws s3 sync ./dist/ s3://mycoderepo/angularbuild/  --debug
+      run: aws s3 sync ./dist/ s3://angularuicode/angulardev/  --debug
 
