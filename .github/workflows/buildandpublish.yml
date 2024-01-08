@@ -42,7 +42,7 @@ jobs:
          path: dist/
     - name: list files in dist after build
       run: |
-          ls -l ./dist/angularproject
+          ls -l ./dist/angularproject/browser/
 
   publish:
     needs: build
