@@ -23,17 +23,18 @@ jobs:
 
     - name: Build Angular Project
       run: npm run build
-
-    - name: Package Artifacts
-      run: |
-        cd ./dist/angularproject/
-        zip -r ../../angular-artifact.zip .
+      
+    # - name: Package Artifacts
+    #   run: |
+    #     mkdir packaged
+    #     cp -R dist/* packaged/
+    #     zip -r angular-artifact.zip packaged
     
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
          name: angular-artifact
-         path: angular-artifact.zip
+         path: dist/
     - name: list files in dist after build
       run: |
           ls -l ./dist/angularproject
@@ -63,5 +64,5 @@ jobs:
 
 
     - name: Upload to S3
-      run: aws s3 sync ./dist/ s3://mycoderepo/angularbuild/  --debug
+      run: aws s3 sync ./dist/angularproject/ s3://mycoderepo/angularbuild/  --debug
 
